@@ -1,0 +1,8 @@
+function titleCase(str) {
+  str = str.toLowerCase();
+  var firstletter = str.charAt(/\w/);
+  str = str.replace(firstletter, firstletter.toUpperCase());
+  return str;
+}
+
+titleCase("i'm a little tea pot");
