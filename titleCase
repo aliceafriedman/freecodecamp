@@ -1,8 +1,16 @@
 function titleCase(str) {
   str = str.toLowerCase();
-  var firstletter = str.charAt(/\w/);
-  str = str.replace(firstletter, firstletter.toUpperCase());
-  return str;
+  var arr = str.split(" ");
+  for(var i=0; i<arr.length;i++ ){
+    var arrWords = str.split("");
+    var first = /\^/; 
+    arr[i].replace(i,1, first.toUpperCase());  
+    arrWords.join("");
+  }
+
+  return arr.join(" ");
+
 }
 
-titleCase("i'm a little tea pot");
+titleCase("i'm A little tEaeeeee pot");
+
