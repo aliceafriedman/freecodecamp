@@ -1,15 +1,16 @@
+function firstCase(string) {
+      var firstletter = string.charAt(/\^/);
+      string = string.replace(firstletter, firstletter.toUpperCase());
+      return string;
+      }
+    
 function titleCase(str) {
   str = str.toLowerCase();
-  var arr = str.split(" ");
-  for(var i=0; i<arr.length;i++ ){
-    var arrWords = str.split("");
-    var first = /\^/; 
-    arr[i].replace(i,1, first.toUpperCase());  
-    arrWords.join("");
-  }
-
+  arr = str.split(" ");
+  for (i=0; i<arr.length; i++) {
+    arr.splice(i,1,firstCase(arr[i]));
+    }
   return arr.join(" ");
-
 }
 
 titleCase("i'm A little tEaeeeee pot");
